@@ -3,10 +3,11 @@
 import React from 'react';
 import NotificationCenter from './notifications/NotificationCenter';
 import { BellIcon, UserIcon, MenuIcon } from './icons';
+import ThemeToggle from './ThemeToggle';
 
 export default function Navbar() {
   return (
-    <nav className="bg-white border-b border-airbnb-gray-200 sticky top-0 z-40" 
+    <nav className="navbar-background border-b sticky top-0 z-40" 
          style={{ boxShadow: 'var(--airbnb-shadow-sm)' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -37,6 +38,8 @@ export default function Navbar() {
           </div>
 
           <div className="flex items-center space-x-4">
+            <ThemeToggle />
+            
             <NotificationCenter />
 
             <button className="airbnb-button airbnb-button-icon flex items-center space-x-2">
